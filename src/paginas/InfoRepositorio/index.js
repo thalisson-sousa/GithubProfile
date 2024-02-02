@@ -5,7 +5,7 @@ import { salvarRepositoriosUsuario, deletarRepositoriosUsuario } from '../../ser
 
 export default function InfoRepositorio({ route, navigation }) {
     const [nome, setNome] = useState(route.params.item.name);
-    const [data, setData] = useState(route.params.item.data);
+    const [data, setData] = useState(route.params.item.created_at);
 
     async function salvar() {
         const resultado = await salvarRepositoriosUsuario(

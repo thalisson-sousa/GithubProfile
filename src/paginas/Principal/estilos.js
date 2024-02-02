@@ -81,6 +81,20 @@ const estilos = StyleSheet.create({
         fontSize: 13,
         marginTop: 5,
     },
+    bio: {
+        margin: 20,
+        alignItems: 'center',
+    },
+    bioTitulo: {
+        color: '#8A07DA',
+        fontSize: 15,
+    },
+    bioTexto: {
+        color: '#95A8B2',
+        fontSize: 13,
+        marginTop: 5,
+        textAlign: 'center',
+    },
     repositorios: {
         color: '#8A07DA',
         fontSize: 15,

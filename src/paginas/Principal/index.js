@@ -40,8 +40,16 @@ export default function Principal({ navigation }) {
                             <Text style={estilos.seguidoresNumero}>{usuario.following}</Text>
                             <Text style={estilos.seguidoresTexto}>Seguindo</Text>
                         </View>
+                        <View style={estilos.seguidores}>
+                            <Text style={estilos.seguidoresNumero}>{usuario.public_repos}</Text>
+                            <Text style={estilos.seguidoresTexto}>Repositórios 🌐</Text>
+                        </View>
                     </View>
-                    <TouchableOpacity onPress={() => navigation.navigate('Repositorios', {id: usuario.id})}>
+                    <View style={estilos.bio}>
+                        <Text style={estilos.bioTitulo}>Bio:</Text>
+                        <Text style={estilos.bioTexto} >{usuario.bio}</Text>
+                    </View>
+                    <TouchableOpacity onPress={() => navigation.navigate('Repositorios', {login: usuario.login})}>
                         <Text style={estilos.repositorios}>
                             Ver os repositórios
                         </Text>

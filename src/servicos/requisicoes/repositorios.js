@@ -1,8 +1,8 @@
 import api from "../api"
 
-export async function pegarRepositoriosUsuario(id) {
+export async function pegarRepositoriosUsuario(login) {
     try {
-        const resultado = await api.get(`/repos?postId=${id}`);
+        const resultado = await api.get(`/users/${login}/repos`);
         return resultado.data;
     } catch (error) {
         console.log(error);
